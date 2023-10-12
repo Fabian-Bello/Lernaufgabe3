@@ -10,6 +10,13 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
+  <component name="PhpInterpreters">
+    <interpreters>
+      <interpreter id="3ecebfc4-023e-4add-be11-cfd94514e52e" name="busybox:latest" home="docker://DATA" auto="false" debugger_id="php.debugger.XDebug" custom_ini="&quot;C:\Users\User\Downloads\php-devel-pack-8.2.11-Win32-vs16-x64.zip&quot;">
+        <remote_data INTERPRETER_PATH="php" HELPERS_PATH="/opt/.phpstorm_helpers" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" DOCKER_ACCOUNT_NAME="Docker" DOCKER_IMAGE_NAME="busybox:latest" DOCKER_REMOTE_PROJECT_PATH="/opt/project" />
+      </interpreter>
+    </interpreters>
+  </component>
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
