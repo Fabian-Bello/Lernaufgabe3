@@ -59,7 +59,7 @@ $data = getAllData();
 
 
 if (count($data) > 0) {
-    echo '<table class="table mt-3">';
+    echo '<table class="table mt-4 mb-3">';
     echo '<tr><th>First Name</th><th>Last Name</th><th>Email</th></tr>';
 
     foreach ($data as $row) {
