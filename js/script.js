@@ -1,9 +1,13 @@
+onload(initialize());
+
 function initialize() {
     document.getElementById("filter").onkeyup = filterRows;
 }
 
+
 function filterRows() {
     var filter = document.getElementById("filter").value.toLowerCase();
+}
 
     if (filter == "") {
         $('.users tr').each(function (i, row) {
@@ -26,5 +30,10 @@ function filterRows() {
                 }
             }
         });
-    }
+
+}
+
+function clearInputField() {
+    var inputField = document.getElementById("search");
+    inputField.value = "";
 }

@@ -16,13 +16,13 @@
     <h1>Benutzerdaten anzeigen:</h1>
         <div class="row">
             <div class="col-sm-4 mb-2 col-auto">
-                <input type="text" class="form-control" placeholder="Suchen...">
+                <input type="text" class="form-control" placeholder="Suchen..." id="search">
             </div>
             <div class="col-auto mb-2 ">
-                <button class="btn btn-primary btn-block" type="button" onclick="initialize()">Suchen</button>
+                <button class="btn btn-primary btn-block" type="button" onclick="initialize()" id="filter">Suchen</button>
             </div>
             <div class="col-auto mb-2">
-                <button class="btn btn-secondary btn-block" type="button">Löschen</button>
+                <button class="btn btn-secondary btn-block" type="button" onclick="clearInputField()">Löschen</button>
             </div>
         </div>
 
