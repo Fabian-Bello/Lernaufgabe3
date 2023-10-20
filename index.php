@@ -10,6 +10,7 @@
     <script src="js/script.js"></script>
 
 </head>
+
 <body>
 <div class="container mt-3 ">
     <h1>Benutzerdaten anzeigen:</h1>
@@ -18,7 +19,7 @@
                 <input type="text" class="form-control" placeholder="Suchen...">
             </div>
             <div class="col-auto mb-2 ">
-                <button class="btn btn-primary btn-block" type="button">Suchen</button>
+                <button class="btn btn-primary btn-block" type="button" onclick="initialize()">Suchen</button>
             </div>
             <div class="col-auto mb-2">
                 <button class="btn btn-secondary btn-block" type="button">Löschen</button>
@@ -27,27 +28,15 @@
 
 
 
-    <table class="table mt-5" >
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>E-Mail</th>
-            <th>Geburtsdatum</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Data 1</td>
-            <td>Data 2</td>
-            <td>Data 3</td>
-        </tr>
 
-        </tbody>
-    </table>
 </div>
 
 
 </body>
 </html>
 <?php
+
+include "lib/db.data.php";
+
+?>
 

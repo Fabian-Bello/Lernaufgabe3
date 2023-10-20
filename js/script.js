@@ -13,10 +13,9 @@ function filterRows() {
         });
     } else {
         $('.users tr').each(function (i, row) {
-            // ignore header row
-            if (i > 0) {
-                var $row = $(row);  // convert to object
 
+            if (i > 0) {
+                var $row = $(row);
                 var name = $row.find('td:nth-child(1)').text().toLowerCase();
                 var email = $row.find('td:nth-child(2)').text().toLowerCase();
 
