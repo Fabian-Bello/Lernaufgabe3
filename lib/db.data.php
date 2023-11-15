@@ -34,7 +34,6 @@ function getAllData()
     return $data;
 }
 
-
 /**
  * filter data on firstname, lastname or email
  *
@@ -44,7 +43,7 @@ function getAllData()
 function getFilteredData($filter)
 {
     $db = connect();
-    $sql = "SELECT * FROM user WHERE firstname LIKE :firstname OR lastname LIKE :lastname OR email LIKE :email ORDER BY id";
+    $sql = "SELECT * FROM user WHERE firstname LIKE :firstname OR lastname LIKE :lastname OR email LIKE :email ORDER BY lastname, firstname";
     $stmt = $db->prepare($sql);
     $filter = "%$filter%";
     $stmt->bindValue(':firstname', $filter);
@@ -53,32 +52,13 @@ function getFilteredData($filter)
     $stmt->execute();
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $data;
-
 }
 
-$data = getAllData();
-
-
-if (count($data) > 0) {
-    echo '<table class="table mt-4 mb-3">';
-    echo '<tr><th>ID</th><th>Name</th><th>E-mail</th><th>Geburtsdatum</th></tr>';
-
-    foreach ($data as $row) {
-        echo '<tr>';
-        echo '<td><a href="detailpage.php?id=' . $row['id'] . '">' . $row['id'] . '</a></td>';
-        $name = $row['firstname'] .' '. $row['lastname'];
-        echo '<td>' . $name . '</td>';
-        echo '<td>' . $row['email'] .  '</td>';
-        echo '<td>'. $row['birthdate'] .'</td>';
-        echo '</tr>';
-    }
-
-    echo '</table>';
-} else {
-    echo 'Keine Daten da, Opfer';
-
-}
-
+/**
+ * filter data based on id
+ * @param $id
+ * @return array or null
+ */
 function getDataPerId($id)
 {
     $db = connect();
@@ -90,5 +70,4 @@ function getDataPerId($id)
 }
 
 ?>
-
 

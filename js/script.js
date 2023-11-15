@@ -1,13 +1,9 @@
-onload(initialize());
-
 function initialize() {
     document.getElementById("filter").onkeyup = filterRows;
 }
 
-
 function filterRows() {
     var filter = document.getElementById("filter").value.toLowerCase();
-}
 
     if (filter == "") {
         $('.users tr').each(function (i, row) {
@@ -17,9 +13,10 @@ function filterRows() {
         });
     } else {
         $('.users tr').each(function (i, row) {
-
+            // ignore header row
             if (i > 0) {
-                var $row = $(row);
+                var $row = $(row);  // convert to object
+
                 var name = $row.find('td:nth-child(1)').text().toLowerCase();
                 var email = $row.find('td:nth-child(2)').text().toLowerCase();
 
@@ -30,14 +27,11 @@ function filterRows() {
                 }
             }
         });
-
+    }
 }
+
 
 function clearSearch() {
-    document.getElementById("search").value = "";
-}
-function showDetails(){
-
+    document.getElementById("filterName").value = "";
 
 }
-
