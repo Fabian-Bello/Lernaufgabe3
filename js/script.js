@@ -33,7 +33,11 @@ function filterRows() {
 
 }
 
-function clearInputField() {
-    var inputField = document.getElementById("search");
-    inputField.value = "";
+function clearSearch() {
+    document.getElementById("search").value = "";
 }
+function showDetails(){
+
+
+}
+
