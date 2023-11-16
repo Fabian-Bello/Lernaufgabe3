@@ -24,7 +24,7 @@ if (!empty($users)) {
     echo '</tr>';
 
     foreach ($users as $user) {
-        echo '<tr>';
+        echo '<tr class="userRow">';
         echo '<td><a href="detailpage.php?id=' . $user['id'] . '">' . $user['id'] . '</a></td>';
         echo '<td>' . $user['firstname'] . ' ' . $user['lastname'] . '</td>';
         echo '<td>' . $user['email'] . '</td>';
